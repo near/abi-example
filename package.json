@@ -1,6 +1,7 @@
 {
   "name": "freyr",
   "version": "0.1.0",
+  "description": "Extract embedded ABI from a NEAR smart contract",
   "type": "module",
   "main": "./inspect.js",
   "bin": {

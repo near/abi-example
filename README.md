@@ -1,8 +1,6 @@
 # NEAR ABI Example
 
-This repo is an example of a NEAR smart contract with embedded ABI.
-
-And a JavaScript library for extracting the ABI from the contract after being deployed on-chain.
+Extract embedded ABI from a NEAR smart contract
 
 ## Requirements
 
