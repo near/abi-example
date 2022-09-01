@@ -18,11 +18,13 @@ Extract embedded ABI from a NEAR smart contract
   $ npm install -g near-cli
   ```
 
-## How to use
+## Usage
 
-- First, download the dependencies.
+- Clone and download the dependencies.
 
   ```console
+  $ git clone https://github.com/near/abi-example
+  $ cd abi-example
   $ npm install
   ```
 
