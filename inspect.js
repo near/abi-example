@@ -14,11 +14,11 @@ const networks = {
 async function inspectContract(network, contractId, args) {
   let {toJson, compactJson, raw} = args;
 
-  const client = await nearApi.connect({
+  let near = await nearApi.connect({
     nodeUrl: new URL(network in networks ? networks[network] : network),
   });
 
-  let account = await client.account(contractId);
+  let account = await near.account(contractId);
   let response = await account.viewFunctionV2({contractId, args: {}, methodName: '__contract_abi', parse: v => v});
 
   if (raw) return process.stdout.write(response);
