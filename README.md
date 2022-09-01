@@ -13,7 +13,7 @@ Extract embedded ABI from a NEAR smart contract
 - [`near-cli`](https://github.com/near/near-cli) for deploying the smart contract.
 
   ```console
-  npm install near-cli
+  npm install -g near-cli
   ```
 
 ## How to use
