@@ -1,0 +1,34 @@
+https://github.com/yoshihitoh/zstd-codec
+  - not a binding
+  - wasm
+  - no bundler needed
+  - compresses / decompresses
+  - size: 2.7M, 831.6k gzipped
+
+https://github.com/bokuweb/zstd-wasm
+  - not a binding
+  - wasm
+  - bundler optional
+  - compresses / decompresses
+  - size: 9.1k, 2.9k gzipped
+
+https://github.com/101arrowz/fzstd
+  - not a binding
+  - pure JS
+  - no bundler needed
+  - decompresses
+  - size: 8.5k, 3.9k gzipped
+
+https://github.com/fabiospampinato/zstandard-wasm
+  - not a binding
+  - wasm
+  - no bundler needed
+  - decompresses
+  - size: 68.8k, 28.9k gzipped
+
+https://github.com/donmccurdy/zstddec
+  - not a binding
+  - wasm
+  - no bundler needed
+  - decompresses
+  - size: 40k, 17.3k gzipped
