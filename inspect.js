@@ -19,7 +19,7 @@ async function inspectContract(network, contractId, args) {
   });
 
   let account = await near.account(contractId);
-  let response = await account.viewFunctionV2({contractId, args: {}, methodName: '__contract_abi', parse: v => v});
+  let response = await account.viewFunction({contractId, args: {}, methodName: '__contract_abi', parse: v => v});
 
   if (raw) return process.stdout.write(response);
 
