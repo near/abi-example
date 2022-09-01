@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 import util from 'util';
+import path from 'path';
 import * as fzstd from 'fzstd';
 import * as nearApi from 'near-api-js';
 
@@ -40,9 +42,10 @@ async function main(i) {
   if ((toJson = !!~(i = args.indexOf('--json')))) args.splice(i, 1);
   if ((compactJson = !!~(i = args.indexOf('--compact')))) args.splice(i, 1);
   if (args.length !== 1 || ['-h', '--help'].some(arg => args.includes(arg))) {
+    let cmd = process.argv[1].endsWith('.js') ? 'node ' + path.basename(process.argv[1]) : path.basename(process.argv[1]);
     console.error('contract-inspector');
     console.error('------------------');
-    console.error('Usage: node inspect.js <contractName> [--network <NETWORK>] [[--json] --compact] [--raw]');
+    console.error(`Usage: ${cmd} <contractName> [--network <NETWORK>] [[--json] --compact] [--raw]`);
     console.error();
     console.error('Options:');
     console.error('  --network <NETWORK>  Network name or URL to connect to [default: testnet]');

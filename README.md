@@ -90,6 +90,14 @@ Extract embedded ABI from a NEAR smart contract
 
   See `node inspect.js --help` for a complete list of options.
 
+- You can also install it globally if you find it useful.
+
+  ```console
+  $ npm link
+  ```
+
+  Afterwards, you can use the `near-inspect` command anywhere instead of `node inspect.js`.
+
 ## Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted
