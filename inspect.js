@@ -43,8 +43,8 @@ async function main(i) {
   if ((compactJson = !!~(i = args.indexOf('--compact')))) args.splice(i, 1);
   if (args.length !== 1 || ['-h', '--help'].some(arg => args.includes(arg))) {
     let cmd = process.argv[1].endsWith('.js') ? 'node ' + path.basename(process.argv[1]) : path.basename(process.argv[1]);
-    console.error('contract-inspector');
-    console.error('------------------');
+    console.error('near-contract-inspector');
+    console.error('-----------------------');
     console.error(`Usage: ${cmd} <contractName> [--network <NETWORK>] [[--json] --compact] [--raw]`);
     console.error();
     console.error('Options:');
