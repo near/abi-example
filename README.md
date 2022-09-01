@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD014 -->
+
 # NEAR ABI Example
 
 Extract embedded ABI from a NEAR smart contract
@@ -7,18 +9,24 @@ Extract embedded ABI from a NEAR smart contract
 - [`cargo-near`](https://github.com/near/cargo-near) for building the smart contract.
 
   ```console
-  cargo install cargo-near
+  $ cargo install cargo-near
   ```
 
 - [`near-cli`](https://github.com/near/near-cli) for deploying the smart contract.
 
   ```console
-  npm install -g near-cli
+  $ npm install -g near-cli
   ```
 
 ## How to use
 
-- First, we need to build and deploy a contract with ABI embedded.
+- First, download the dependencies.
+
+  ```console
+  $ npm install
+  ```
+
+- Next, we need to build and deploy a contract with ABI embedded.
 
   - Build the contract
 
