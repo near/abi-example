@@ -73,7 +73,7 @@ Extract embedded ABI from a NEAR smart contract
     }
     ```
 
-  - Export the ABI as compact JSON
+  - Export the ABI as compact JSON (see [res/adder_abi.json](https://github.com/near/abi-example/blob/master/res/adder_abi.json) for a full output)
 
     ```console
     $ NEAR_ENV=testnet node inspect.js dev-1661966288541-80307357536154 --json --compact
