@@ -54,16 +54,16 @@ async function main(i) {
     console.error('  --raw                Output raw bytes');
     console.error();
     console.error('Examples:');
-    console.error('  node inspect.js my-contract.testnet');
+    console.error(`  ${cmd} my-contract.testnet`);
     console.error('    Outputs the contract ABI');
     console.error();
-    console.error('  node inspect.js my-contract.testnet --json');
+    console.error(`  ${cmd} my-contract.testnet --json`);
     console.error('    Outputs the contract ABI in JSON');
     console.error();
-    console.error('  node inspect.js my-contract.testnet --json --compact | jq');
+    console.error(`  ${cmd} my-contract.testnet --json --compact | jq`);
     console.error('    Outputs the contract ABI in minified JSON');
     console.error();
-    console.error('  node inspect.js my-contract.testnet --raw | unzstd');
+    console.error(`  ${cmd} my-contract.testnet --raw | unzstd`);
     console.error('    Outputs the contract ABI in raw bytes, allowing you to manually decompress it');
     process.exit(1);
   }
