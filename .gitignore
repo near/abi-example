@@ -1,0 +1,9 @@
+target/
+Cargo.lock
+
+node_modules/
+
+res/*
+!res/adder_abi.json
+
+neardev/

@@ -1,0 +1,20 @@
+{
+  "name": "freyr",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./inspect.js",
+  "bin": {
+    "near-inspect": "./inspect.js"
+  },
+  "author": "Near Inc <hello@nearprotocol.com>",
+  "license": "(MIT OR Apache-2.0)",
+  "dependencies": {
+    "fzstd": "^0.0.4",
+    "near-api-js": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.7.1"
+  }
+}
