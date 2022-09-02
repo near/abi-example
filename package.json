@@ -1,5 +1,5 @@
 {
-  "name": "freyr",
+  "name": "near-abi-example",
   "version": "0.1.0",
   "description": "Extract embedded ABI from a NEAR smart contract",
   "type": "module",
