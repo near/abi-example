@@ -34,13 +34,24 @@ Extract embedded ABI from a NEAR smart contract
 
     ```console
     $ cargo near build --release --embed-abi --doc --out-dir ./res
-        Finished dev [unoptimized] target(s) in 0.15s
-      Compiling adder v0.1.0 (/abi-example)
-        Finished release [optimized] target(s) in 1.87s
-    Contract Successfully Built!
-      -       Binary: /abi-example/res/adder.wasm
-      -          ABI: /abi-example/res/adder_abi.json
-      - Embedded ABI: /abi-example/res/adder_abi.zst
+    • Checking the host environment...done
+    • Collecting cargo project metadata...done
+    • Generating ABI
+    │    Compiling near-abi v0.1.0
+    │    Compiling near-sdk v4.1.0-pre.3
+    │    Compiling adder v0.1.0 (/abi-example)
+    │     Finished dev [unoptimized] target(s) in 3.06s
+    • Extracting ABI...done
+    • Compressing ABI to be embedded..done
+    • Building contract
+    │    Compiling near-abi v0.1.0
+    │    Compiling near-sdk v4.1.0-pre.3
+    │    Compiling adder v0.1.0 (/abi-example)
+    │     Finished release [optimized] target(s) in 3.51s
+    ✓ Contract successfully built!
+        -       Binary: /abi-example/res/adder.wasm
+        -          ABI: /abi-example/res/adder_abi.json
+        - Embedded ABI: /abi-example/res/adder_abi.zst
     ```
 
     This would export the compiled contract to the `res` directory, with its ABI embedded within.
