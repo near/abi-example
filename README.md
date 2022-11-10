@@ -34,7 +34,7 @@ Extract embedded ABI from a NEAR smart contract
 
     `$ cargo near build --release --embed-abi --doc --out-dir ./res`
 
-    <img width="461" alt="demo" src="https://user-images.githubusercontent.com/16881812/201167123-a3ea0824-2fc9-44cd-91de-7ee1fa663164.png">
+    <img width="461" alt="demo" src="https://github.com/near/abi-example/raw/master/demo.png">
 
     This would export the compiled contract to the `res` directory, with its ABI embedded within.
 
@@ -49,7 +49,7 @@ Extract embedded ABI from a NEAR smart contract
     Done deploying to dev-1661966288541-80307357536154
     ```
 
-- Next, inspect the ABI for the on-chain contract. (the returns JSON adhering to [this schema](https://github.com/near/near-abi-js/blob/7ec3900d273716e3270f9573c928f9bd68d933c5/src/index.ts))
+- Next, inspect the ABI for the on-chain contract. (the returns JSON adhering to [this schema](https://github.com/near/near-abi-js/blob/d468185a012c77428cf07757292104fdd3e1ea0c/lib/index.d.ts))
 
   - Quick inspection
 
