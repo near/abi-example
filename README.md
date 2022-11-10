@@ -2,7 +2,7 @@
 
 # NEAR ABI Example
 
-Extract embedded ABI from a NEAR smart contract
+Build a NEAR smart contract with ABI embedded, and inspect it on-chain.
 
 ## Requirements
 
