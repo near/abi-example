@@ -32,27 +32,9 @@ Extract embedded ABI from a NEAR smart contract
 
   - Build the contract
 
-    ```console
-    $ cargo near build --release --embed-abi --doc --out-dir ./res
-    • Checking the host environment...done
-    • Collecting cargo project metadata...done
-    • Generating ABI
-    │    Compiling near-abi v0.1.0
-    │    Compiling near-sdk v4.1.0-pre.3
-    │    Compiling adder v0.1.0 (/abi-example)
-    │     Finished dev [unoptimized] target(s) in 3.06s
-    • Extracting ABI...done
-    • Compressing ABI to be embedded..done
-    • Building contract
-    │    Compiling near-abi v0.1.0
-    │    Compiling near-sdk v4.1.0-pre.3
-    │    Compiling adder v0.1.0 (/abi-example)
-    │     Finished release [optimized] target(s) in 3.51s
-    ✓ Contract successfully built!
-        -       Binary: /abi-example/res/adder.wasm
-        -          ABI: /abi-example/res/adder_abi.json
-        - Embedded ABI: /abi-example/res/adder_abi.zst
-    ```
+    `$ cargo near build --release --embed-abi --doc --out-dir ./res`
+
+    <img width="461" alt="demo" src="https://user-images.githubusercontent.com/16881812/201167123-a3ea0824-2fc9-44cd-91de-7ee1fa663164.png">
 
     This would export the compiled contract to the `res` directory, with its ABI embedded within.
 
@@ -61,9 +43,9 @@ Extract embedded ABI from a NEAR smart contract
     ```console
     $ NEAR_ENV=testnet near dev-deploy ./res/adder.wasm
     Starting deployment. Account id: dev-1661966288541-80307357536154, node: https://rpc.testnet.near.org, file: ./res/adder.wasm
-    Transaction Id HQwvkt78LKsopXz2CNXLgf4iJQhCJ5dv8L8zgtjpMQyE
+    Transaction Id FqZPhkJ2YzFkrUXFpUetwmwtzgm9P7QMLyMtGZQhRx5u
     To see the transaction in the transaction explorer, please open this url in your browser
-    https://explorer.testnet.near.org/transactions/HQwvkt78LKsopXz2CNXLgf4iJQhCJ5dv8L8zgtjpMQyE
+    https://explorer.testnet.near.org/transactions/FqZPhkJ2YzFkrUXFpUetwmwtzgm9P7QMLyMtGZQhRx5u
     Done deploying to dev-1661966288541-80307357536154
     ```
 
@@ -74,23 +56,23 @@ Extract embedded ABI from a NEAR smart contract
     ```console
     $ NEAR_ENV=testnet node inspect.js dev-1661966288541-80307357536154
     {
-      schema_version: '0.1.0',
+      schema_version: '0.3.0',
       metadata: {
         name: 'adder',
         version: '0.1.0',
-        authors: [ 'Near Inc <hello@nearprotocol.com>' ]
+        authors: [ 'Near Inc <hello@nearprotocol.com>' ],
+        build: { compiler: 'rustc 1.64.0', builder: 'cargo-near 0.3.0' }
       },
       body: {
         functions: [
           ...
-    }
     ```
 
   - Export the ABI as compact JSON (see [res/adder_abi.json](https://github.com/near/abi-example/blob/master/res/adder_abi.json) for a full output)
 
     ```console
     $ NEAR_ENV=testnet node inspect.js dev-1661966288541-80307357536154 --json --compact
-    {"schema_version":"0.1.0","metadata":{"name":"adder","version":"0.1.0","authors":["Near Inc <hello@nearprotocol.com>"]},"body":{"functions":[ ...
+    {"schema_version":"0.3.0","metadata":{"name":"adder","version":"0.1.0","authors":["Near Inc <hello@nearprotocol.com>"],"build":{"compiler":"rustc 1.64.0","builder":"cargo-near 0.3.0"}},"body":{"functions":[{ ...
     ```
 
   - Export the raw, compressed ABI (should be the same as the file in `./res/adder_abi.zst`), you can test this with:
