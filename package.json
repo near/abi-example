@@ -11,7 +11,7 @@
   "license": "(MIT OR Apache-2.0)",
   "dependencies": {
     "fzstd": "^0.0.4",
-    "near-api-js": "^1.0.0"
+    "near-api-js": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",
