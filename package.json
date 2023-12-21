@@ -10,7 +10,7 @@
   "author": "Near Inc <hello@nearprotocol.com>",
   "license": "(MIT OR Apache-2.0)",
   "dependencies": {
-    "fzstd": "^0.0.4",
+    "fzstd": "^0.1.0",
     "near-api-js": "^1.0.0"
   },
   "devDependencies": {
